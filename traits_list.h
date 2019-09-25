@@ -40,6 +40,7 @@ class TraitsList {
         bool remove(T data) {
             Node<T> **pointer=nullptr, **temp=nullptr;
             if (find(data, pointer)) {
+                // Aquí algo está fallando, no puedes borrar así un doble puntero. Deberías borrar el contenido
                 temp = pointer;
                 *pointer = (*pointer)->next;
                 delete temp;
